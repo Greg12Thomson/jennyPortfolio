@@ -21,7 +21,7 @@
 
 
     .menu-item {
-        color: #000;
+        color: #d6d6d6;
         justify-content: center;
         align-items: center;
         padding-top: 1rem;
@@ -31,13 +31,13 @@
         overflow: hidden;
 
         &:hover {
-            background-color: $orange-hover;
+            background-color: $yellow;
+            color: black;
+            border-radius: 3rem;
         }
     }
 
     h2 {
-        margin-top: 0;
-        margin-bottom: 1rem;
         font-size: 4rem;
         font-weight: bold;
         text-transform: uppercase;

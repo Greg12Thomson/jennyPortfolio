@@ -1,8 +1,9 @@
 import React from 'react';
 import {Col, Container, Row} from 'react-bootstrap';
 
-function Hero() {
+function Header() {
     return (
+      <header className="App-header">
         <Container className="header">
           <Row>
             <Col md={12}>
@@ -23,8 +24,9 @@ function Hero() {
               </h1>         
             </Col>
           </Row>
-        </Container>
+        </Container>              
+      </header>
     );
 }
 
-export default Hero;
+export default Header;

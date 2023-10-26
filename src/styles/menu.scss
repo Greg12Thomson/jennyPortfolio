@@ -14,6 +14,14 @@
     overflow: visible;
 }
 
+.slanted-down {
+    background-color: $orange;
+    min-height: 7rem;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    overflow: visible;
+}
+
 .menu {
     width: 100%;
     display: flex;

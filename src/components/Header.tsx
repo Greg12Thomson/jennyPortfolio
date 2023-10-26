@@ -18,7 +18,7 @@ function Header() {
             <Col md={12}>  
             <h4>
               <Marquee direction="left" autoFill={true} >
-                Producer - Director - Editor - Content Creater - Copy Writter <Image src={Lemon} className="lemon"/>
+                Producer • Director • Editor • Content Creater • Copy Writter <Image src={Lemon} className="lemon"/>
               </Marquee> 
             </h4> 
             </Col>

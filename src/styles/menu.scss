@@ -37,11 +37,12 @@
         text-decoration: none;
         display: flex;
         overflow: hidden;
+        border-radius: 3rem;
+        margin-bottom: 1rem;
 
         &:hover {
             background-color: $yellow;
             color: black;
-            border-radius: 3rem;
         }
     }
 
@@ -51,4 +52,23 @@
         text-transform: uppercase;
         letter-spacing: 1.5rem;
     }
+}
+
+.contact-me {
+    color: white;
+    background-color: $orange;
+    border: none;
+
+    &:hover {
+        background-color: $orange-hover; 
+    }
+
+    &:active {
+        background-color: $background-colour; 
+    }
+}
+
+.show {
+    background-color: $yellow;
+    color: black !important;
 }

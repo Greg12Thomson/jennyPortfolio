@@ -1,16 +1,16 @@
 import React, { useState } from 'react';
 import { Col, Row } from 'react-bootstrap';
 
-function Portfolio() {
+function Video() {
     const [show, setShow] = useState(false);
 
     return (
         <Row className={show ? "menu-item show" : "menu-item"}>
             <Col md={12}>
-                <div className={show ? "portfolio show" : "portfolio"}>
-                    <h2 onClick={() => setShow(!show)}>Portfolio</h2>
-                    <div className={show ? "portfolio-content" : "hide"}>
-                        My Porfolio!
+                <div className="about">
+                    <h2 onClick={() => setShow(!show)}>Video</h2>
+                    <div className={show ? "about-content" : "hide"}>
+                        TODO
                     </div>
                 </div>
             </Col>
@@ -18,4 +18,4 @@ function Portfolio() {
     );
 }
 
-export default Portfolio;
+export default Video;

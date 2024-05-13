@@ -1,28 +1,58 @@
 @import "parameters";
 
+
+.App-header {
+    background-image:  url('../images/background.png') !important;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+}
+
 .header {
+
     h1 {
-        font-size: 14rem;
+        font-size: 5rem;
+        text-transform: uppercase;
         font-weight: bold;
-        letter-spacing: -1rem;
+        text-wrap: nowrap;
     }
 
-    h4 {
+    .heading {
+        align-self: center;
+    }
+
+    .scroll-container {
+        position: absolute;
+        margin-top: 2rem;
+        top: 55%;
+        left: 0;
+        right: 0;
+    }
+
+
+    .scroll {
         font-size: 1.5rem;
-        background-color: $orange;
-        border-radius: 3rem;
         padding: 0.3rem 0;
         text-transform: uppercase;
         letter-spacing: .3rem;
     }
 
+    .rfm-marquee {
+        padding-right: 1rem;
+    }
+
+    .image-container {
+        z-index: 10;
+    }
+
+    .header-image {
+        max-height: 40rem;
+        padding: 0 1rem;
+    }
+
 }
 
-.lemon {
-    max-height: 2rem;
-    margin: 0.5rem;
-    padding: 0rem 1.5rem;;
-}
+
 
 .hide {
     display: none;

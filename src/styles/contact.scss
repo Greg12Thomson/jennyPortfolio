@@ -1,0 +1,43 @@
+@import "parameters";
+
+.contact {
+    h2 {
+        font-size: 3rem;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
+    .email-section {
+        background-color: $pink;
+        margin-top: 5rem;
+        padding: 2rem 2rem;
+        border-radius: 0 5rem 5rem 0;
+        max-height: 10rem;
+        align-self: center;
+        margin-right: -5%;
+        z-index: 10;
+    }
+
+    .contact-me {
+        color: black;
+        background-color: $yellow;
+        border: none;
+        padding: .5rem 3rem;
+        border-radius: 5rem;
+    
+        &:hover {
+            background-color: $orange-hover; 
+        }
+    
+        &:active {
+            background-color: $background-colour; 
+        }
+    }
+
+    .image {
+        border-radius: 6rem 12rem;
+        margin-top: 2rem;
+        z-index: 1;
+    }
+
+}

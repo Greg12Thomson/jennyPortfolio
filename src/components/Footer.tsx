@@ -15,7 +15,7 @@ function Footer() {
           <Row className="footnote">
             <Col md={12}>     
               <p>
-                © Greg Thomson 2023
+                © Jenny Cleeton 2024
               </p>         
             </Col>
           </Row>

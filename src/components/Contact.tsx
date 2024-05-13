@@ -1,23 +1,24 @@
 import React, { useState } from 'react';
-import { Button, Col, Row } from 'react-bootstrap';
+import { Button, Col, Row, Image } from 'react-bootstrap';
+import Jenny from '../images/Profile Photo.png';
+
 
 function Contact() {
     const email = "jennyCleeton@Gmail.com"
-    const [show, setShow] = useState(false);
 
     return (
-        <Row className={show ? "menu-item show" : "menu-item"}>
+        <Row>
             <Col md={12}>
                 <div className="contact">
-                    <h2 onClick={() => setShow(!show)}>Contact</h2>
-                    <div className={show ? "contact-content" : "hide"}>
-                        <hr/>
-                        <p>
-                            Just saying hello, ask for my CV or see if we can build something amazing that makes
-                            a differnce? I'd love to hear from you. <br/>
-                        </p>
-                        <Button className="contact-me" href={`mailto:${email}`}>Contact Me 🤘</Button>
-                    </div>
+                    <Row>
+                    <Col md={6} className="email-section">
+                        <h2>Get in Touch</h2>
+                        <Button className="contact-me" href={`mailto:${email}`}>EMAIL</Button>
+                    </Col>
+                    <Col md={6} className="image">
+                        <Image src={Jenny} className="header-image" fluid></Image>
+                    </Col>
+                    </Row>
                 </div>
             </Col>
         </Row>

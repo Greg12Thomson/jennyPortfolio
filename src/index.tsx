@@ -7,6 +7,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles/footer.scss'
 import './styles/menu.scss'
 import './styles/header.scss'
+import './styles/contact.scss'
 import { BrowserRouter } from 'react-router-dom';
 
 ReactDOM.render(

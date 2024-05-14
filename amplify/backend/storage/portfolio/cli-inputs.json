@@ -1,0 +1,14 @@
+{
+  "resourceName": "portfolio",
+  "policyUUID": "6ff5844a",
+  "bucketName": "jennyportfoliodd6927fc1bca4ef3851e9711cebe8ed3",
+  "storageAccess": "auth",
+  "guestAccess": [
+    "READ"
+  ],
+  "authAccess": [
+    "READ"
+  ],
+  "triggerFunction": "NONE",
+  "groupAccess": {}
+}

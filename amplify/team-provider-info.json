@@ -10,6 +10,14 @@
       "StackName": "amplify-jennyportfolio-dev-a029e",
       "StackId": "arn:aws:cloudformation:eu-west-1:110992015592:stack/amplify-jennyportfolio-dev-a029e/c7ba9370-1203-11ef-bc9a-0ac8c54438db",
       "AmplifyAppId": "dwd6ktma3tdyb"
+    },
+    "categories": {
+      "auth": {
+        "jennyportfolio23a92a71": {}
+      },
+      "storage": {
+        "portfolio": {}
+      }
     }
   }
 }

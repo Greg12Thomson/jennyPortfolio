@@ -1,0 +1,15 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-jennyportfolio-dev-a029e-authRole",
+      "UnauthRoleArn": "arn:aws:iam::110992015592:role/amplify-jennyportfolio-dev-a029e-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::110992015592:role/amplify-jennyportfolio-dev-a029e-authRole",
+      "Region": "eu-west-1",
+      "DeploymentBucketName": "amplify-jennyportfolio-dev-a029e-deployment",
+      "UnauthRoleName": "amplify-jennyportfolio-dev-a029e-unauthRole",
+      "StackName": "amplify-jennyportfolio-dev-a029e",
+      "StackId": "arn:aws:cloudformation:eu-west-1:110992015592:stack/amplify-jennyportfolio-dev-a029e/c7ba9370-1203-11ef-bc9a-0ac8c54438db",
+      "AmplifyAppId": "dwd6ktma3tdyb"
+    }
+  }
+}

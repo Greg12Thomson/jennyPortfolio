@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Button, Col, Row, Image } from 'react-bootstrap';
 import Jenny from '../images/Profile Photo.png';
 

@@ -1,6 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+import { Amplify } from 'aws-amplify';
+import amplifyconfig from './amplifyconfiguration.json';
+
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -10,6 +13,9 @@ import './styles/header.scss'
 import './styles/contact.scss'
 import './styles/photo.scss'
 import { BrowserRouter } from 'react-router-dom';
+
+
+Amplify.configure(amplifyconfig);
 
 ReactDOM.render(
   <React.StrictMode>

@@ -6,11 +6,16 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    max-height: 33rem;
 }
 
-.portfolio-photo{
+.portfolio-photo {
     height: 15rem;
     width: 15rem;
     margin: .5rem .2rem;
     border: 0.2rem solid $background-colour;
+    object-fit: cover;
+    border-radius: 10rem;
 }

@@ -6,6 +6,10 @@ import Footer from "./components/Footer";
 import Menu from './components/Menu'
 import Header from './components/Header'
 import Contact from './components/Contact'
+import { Amplify } from 'aws-amplify';
+import amplifyconfig from './amplifyconfiguration.json';
+
+Amplify.configure(amplifyconfig);
 
 function App() {
   return (

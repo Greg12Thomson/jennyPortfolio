@@ -10,7 +10,7 @@ function Video() {
                 <div className="about">
                     <h2 onClick={() => setShow(!show)}>Video</h2>
                     <div className={show ? "about-content" : "hide"}>
-                        TODO
+                        On it's way! This website is still under development. 
                     </div>
                 </div>
             </Col>

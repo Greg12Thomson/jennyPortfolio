@@ -1,0 +1,16 @@
+@import "parameters";
+
+
+.photo-content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.portfolio-photo{
+    height: 15rem;
+    width: 15rem;
+    margin: .5rem .2rem;
+    border: 0.2rem solid $background-colour;
+}

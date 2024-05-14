@@ -10,7 +10,7 @@ function PreviousWork() {
                 <div className={show ? "portfolio show" : "portfolio"}>
                     <h2 onClick={() => setShow(!show)}>Previous Work</h2>
                     <div className={show ? "portfolio-content" : "hide"}>
-                        My Porfolio!
+                        On it's way! This website is still under development. 
                     </div>
                 </div>
             </Col>

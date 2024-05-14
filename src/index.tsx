@@ -8,6 +8,7 @@ import './styles/footer.scss'
 import './styles/menu.scss'
 import './styles/header.scss'
 import './styles/contact.scss'
+import './styles/photo.scss'
 import { BrowserRouter } from 'react-router-dom';
 
 ReactDOM.render(

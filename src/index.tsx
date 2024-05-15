@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 import { Amplify } from 'aws-amplify';
-import amplifyconfig from './amplifyconfiguration.json';
+import awsExports from './aws-exports.js';
 
 import App from './App';
 import reportWebVitals from './reportWebVitals';
@@ -15,7 +15,7 @@ import './styles/photo.scss'
 import { BrowserRouter } from 'react-router-dom';
 
 
-Amplify.configure(amplifyconfig);
+Amplify.configure(awsExports);
 
 ReactDOM.render(
   <React.StrictMode>

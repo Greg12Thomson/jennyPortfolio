@@ -35,9 +35,14 @@
     }
 
     .image {
-        border-radius: 6rem 12rem;
+        .img-fluid {
+            border-radius: 6rem 12rem;
+        }
         margin-top: 2rem;
         z-index: 1;
+        &:hover {
+            border: 1px solid #777;
+        }
     }
 
 }

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Col, Row } from 'react-bootstrap';
+import Showreel from './Showreel';
 
 function Video() {
     const [show, setShow] = useState(false);
@@ -10,7 +11,7 @@ function Video() {
                 <div className="about">
                     <h2 onClick={() => setShow(!show)}>Video</h2>
                     <div className={show ? "about-content" : "hide"}>
-                        On it's way! This website is still under development. 
+                        <Showreel />
                     </div>
                 </div>
             </Col>

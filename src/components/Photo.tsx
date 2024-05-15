@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Col, Row } from 'react-bootstrap';
+import { Col, Row, Button } from 'react-bootstrap';
 import { StorageImage } from '@aws-amplify/ui-react-storage';
 
 // amplify config
@@ -15,6 +15,16 @@ const porfolioImages = Array(47).fill(0).map((_, i) => (
 
 function Photo() {
     const [show, setShow] = useState(false);
+    const [page, setPage] = useState(1);
+    const numberOfPages = 5;
+
+    const onClick = () => {
+        if (page < numberOfPages) {
+            setPage((page) => page + 1);
+        } else {
+            setPage(0);
+        }
+    }
 
 
     return (
@@ -23,7 +33,8 @@ function Photo() {
                 <div className="photo">
                     <h2 onClick={() => setShow(!show)}>Photo</h2>
                     <div className={show ? "photo-content" : "hide"}>
-                        {porfolioImages}
+                        {porfolioImages.slice(10 * (page - 1), 10 * page)}
+                        <Button className="porfolio-button" onClick={onClick}>See more</Button>
                     </div>
                 </div>
             </Col>

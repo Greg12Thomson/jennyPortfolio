@@ -12,6 +12,7 @@ import './styles/menu.scss'
 import './styles/header.scss'
 import './styles/contact.scss'
 import './styles/photo.scss'
+import './styles/previousWork.scss'
 import { BrowserRouter } from 'react-router-dom';
 
 

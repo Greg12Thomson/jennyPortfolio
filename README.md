@@ -2,6 +2,8 @@
 
 Repositry for Jenny Cleeton's professional portfolio webiste. This is created using React and Typescript 🚀 
 
+https://jennycleeton.co.uk/
+
 ## Available Scripts
 
 In the project directory, you can run:

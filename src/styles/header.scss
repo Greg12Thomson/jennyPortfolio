@@ -6,6 +6,10 @@
     background-repeat: no-repeat;
     background-position: top;
     background-size: cover;
+
+    @media (max-width: $md-breakpoint) {
+        background-position: left;
+    }
 }
 
 .header {
@@ -14,7 +18,15 @@
         font-size: 5rem;
         text-transform: uppercase;
         font-weight: bold;
+        text-align: left;
+        display: flex;
         text-wrap: nowrap;
+
+        @media (max-width: $md-breakpoint) {
+            font-size: 4rem;
+            text-align: center;
+            text-wrap: wrap;
+        }
     }
 
     .heading {
@@ -27,6 +39,11 @@
         top: 55%;
         left: 0;
         right: 0;
+
+
+        @media (max-width: $md-breakpoint) {
+            top: 10%;
+        }
     }
 
 

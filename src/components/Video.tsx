@@ -10,7 +10,7 @@ function Video() {
             <Col md={12}>
                 <div className="about">
                     <h2 onClick={() => setShow(!show)}>Video</h2>
-                    <div className={show ? "about-content" : "hide"}>
+                    <div className={show ? "video-content" : "hide"}>
                         <Showreel />
                     </div>
                 </div>

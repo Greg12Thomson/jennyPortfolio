@@ -2,6 +2,11 @@
 
 .previous-work {
     justify-content: center; 
+
+    
+    @media (max-width: $mobile-max-width) {
+        padding: 1.5rem;
+    }
 }
 
 .work-card {
@@ -29,4 +34,8 @@
 
 .work-link {
     color: black;
+}
+
+.about-content {
+    padding: 1rem;
 }

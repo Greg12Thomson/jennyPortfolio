@@ -8,17 +8,13 @@ function Header() {
       <header className="App-header">
         <Container className="header">
           <Row>
-            <Col md={8} className="heading">
+            <Col md={8} sm={9} className="heading">
               <h1>
                 Jenny Cleeton
               </h1>
             </Col>
-            <Col md={4} className="image-container">
-              <Row>
-                <Col md={12}>
-                  <Image src={Jenny} className="header-image"></Image>
-                </Col>
-              </Row>
+            <Col md={4} sm={3} className="image-container">
+                <Image src={Jenny} className="header-image"></Image>
             </Col>
           </Row>
           <div className="scroll-container">

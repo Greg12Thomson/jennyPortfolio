@@ -18,7 +18,7 @@ function Showreel() {
 
     return (
         <div className="showreel">
-            <YouTube videoId="B8UOVlWoHrI" opts={options} onReady={_onReady} id="video"/>;
+            <YouTube className="youtube" videoId="B8UOVlWoHrI" opts={options} onReady={_onReady} id="video"/>
         </div>
     );
 }

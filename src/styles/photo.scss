@@ -14,7 +14,16 @@
     margin: .5rem .2rem;
     border: 0.2rem solid $background-colour;
     object-fit: cover;
-    border-radius: 10rem;
+    border-radius: 3rem 6rem;
+
+    &:hover {
+        transform: scale(1.3);
+    }
+
+    @media (max-width: $mobile-max-width) {
+        height: 10rem;
+        width: 10rem;
+    }
 }
 
 .porfolio-button {
@@ -26,6 +35,20 @@
     text-transform: uppercase;
 
     &:hover {
-        background-color: $orange-hover; 
+        background-color: $pink; 
+        color: white;
     }
 }
+
+.youtube {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem 0rem 2rem 0rem;
+  }
+  
+  .youtube iframe {
+    width: 80%; /* Set the width of the iframe */
+    height: 45vw; /* Set the height of the iframe based on the aspect ratio 
+  */
+  }

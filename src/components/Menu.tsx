@@ -4,6 +4,7 @@ import About from './About';
 import PreviousWork from './PreviousWork';
 import Photo from './Photo';
 import Video from './Video';
+import Illustrations from './Illustrations';
 
 
 function Menu() {
@@ -12,6 +13,7 @@ function Menu() {
             <Photo />
             <Video />
             <PreviousWork />
+            <Illustrations />
             <About />
         </Container>
     );

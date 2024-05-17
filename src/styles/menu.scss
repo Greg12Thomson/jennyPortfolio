@@ -51,12 +51,16 @@
         font-size: 4rem;
         font-weight: bold;
         text-transform: uppercase;
-        letter-spacing: 1.5rem;
+        letter-spacing: .5rem;
         padding: .5rem;
 
         @media (max-width: $md-breakpoint) {
             font-size: 3rem;
-            letter-spacing: 1rem;
+        }
+
+
+        @media (max-width: $mobile-max-width) {
+            font-size: 2rem;
         }
     }
 }

@@ -2,6 +2,7 @@
   text-align: center;
   background-color: #fbc53e;
   overflow-x: hidden;
+  overflow-y: hidden;
   font-family: Didot, "Didot LT STD", "Hoefler Text", Garamond, "Times New Roman", serif !important;
     /* font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; */
 }

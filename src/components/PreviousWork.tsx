@@ -1,8 +1,22 @@
 import React, { useState } from 'react';
 import { Col, Row } from 'react-bootstrap';
 
+import YouTube, { YouTubeEvent } from "react-youtube";
+
+const _onReady = (event: YouTubeEvent) => {
+    event.target.pauseVideo();
+}
+
 function PreviousWork() {
     const [show, setShow] = useState(false);
+
+    const options = {
+        height: '390',
+        width: '640',
+        playerVars: {
+          controls: 1,
+        },
+      };
 
     return (
         <Row className={show ? "menu-item show" : "menu-item"}>
@@ -19,22 +33,28 @@ function PreviousWork() {
                             <Col md={3} sm={6} className="work-card">
                                 <h3>Sara DRTV</h3>
                                 <p>Story gatherer, producer, writer, director</p>
-                                <a className="work-link" target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/watch?v=RtZcvOvuVvc&ab_channel=SavetheChildrenInternationalDRTV">LINK</a>
+                                <div className="video-container">
+                                    <YouTube className="youtube" videoId="RtZcvOvuVvc" opts={options} onReady={_onReady} id="video"/>
+                                </div>
                             </Col>
                             <Col md={3} sm={6} className="work-card">
                                 <h3>Award Winning End Childhood Crisis Campaign</h3>
                                 <p>Writer, producer, director</p>
-                                <a className="work-link" target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/watch?v=sPKmE9mpiAA&ab_channel=ActionforChildren">LINK</a>
+                                <div className="video-container">
+                                    <YouTube className="youtube" videoId="sPKmE9mpiAA" opts={options} onReady={_onReady} id="video"/>
+                                </div>
                             </Col>
                             <Col md={3} sm={6} className="work-card">
                                 <h3>Grace's story </h3>
                                 <p>story gatherer, producer, director, voice over</p>
-                                <a className="work-link" target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/watch?v=zwMP-edgHpk&ab_channel=ActionforChildren">LINK</a>
+                                <div className="video-container">
+                                    <YouTube className="youtube" videoId="zwMP-edgHpk" opts={options} onReady={_onReady} id="video"/>
+                                </div>
                             </Col>
                             <Col md={3} sm={6} className="work-card">
                                 <h3>Lee's story</h3>
-                                <p>story gatherer, producer, director, copywriter</p>
-                                <a className="work-link" target="_blank" rel="noopener noreferrer" href="https://www.actionforchildren.org.uk/our-work-and-impact/real-life-stories/lee-and-warren/">LINK</a>
+                                <p>Produced, wrote and edited</p>
+                                <a className="work-link" target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/reel/CjBISQOrGIo/">LINK</a>
                             </Col>
                             <Col md={3} sm={6} className="work-card">
                                 <h3>The Drum author homepage</h3>

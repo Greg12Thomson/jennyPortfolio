@@ -10,9 +10,9 @@ import Illustrations from './Illustrations';
 function Menu() {
     return (
         <Container className="menu">
-            <Photo />
-            <Video />
             <PreviousWork />
+            <Video />
+            <Photo />
             <Illustrations />
             <About />
         </Container>

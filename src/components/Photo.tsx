@@ -9,14 +9,14 @@ const porfolioImages = Array(47).fill(0).map((_, i) => (
 
 function Photo() {
     const [show, setShow] = useState(false);
-    const [page, setPage] = useState(1);
+    const [page, setPage] = useState(3);
     const numberOfPages = 5;
 
     const onClick = () => {
         if (page < numberOfPages) {
             setPage((page) => page + 1);
         } else {
-            setPage(0);
+            setPage(1);
         }
     }
 

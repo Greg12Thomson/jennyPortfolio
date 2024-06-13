@@ -52,8 +52,8 @@ function PreviousWork() {
                                 </div>
                             </Col>
                             <Col md={3} sm={6} className="work-card">
-                                <h3>Lee's story</h3>
-                                <p>Produced, wrote and edited</p>
+                                <h3>In End Childhood Hunger</h3>
+                                <p>Writer and producer</p>
                                 <a className="work-link" target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/reel/CjBISQOrGIo/">LINK</a>
                             </Col>
                             <Col md={3} sm={6} className="work-card">

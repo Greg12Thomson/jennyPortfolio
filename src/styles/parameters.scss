@@ -1,9 +1,14 @@
-// Colours:
-$yellow: #ffcc4d;
-$orange: #dc6044;
-$orange-hover: #dc5132;
-$background-colour: #faf0e8;
-$pink: #ffa7df;
+// Colours (updated palette):
+// #ffe99a, #ffd586, #ffaaaa, #ff9898
+$yellow: #ffe99a;
+$peach: #ffd586;
+$light-pink: #ffaaaa;
+$pink: #ff9898;
+
+// Semantic aliases, so existing styles keep working but use the new palette
+$orange: $peach;
+$orange-hover: $light-pink;
+$background-colour: $yellow;
 
 
 // Sizes

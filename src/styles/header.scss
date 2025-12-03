@@ -2,14 +2,10 @@
 
 
 .App-header {
-    background-image:  url('../images/background.png') !important;
+    background-image:  url('../images/background-2.png') !important;
     background-repeat: no-repeat;
-    background-position: top;
+    background-position: bottom center;
     background-size: cover;
-
-    @media (max-width: $md-breakpoint) {
-        background-position: left;
-    }
 }
 
 .header {
@@ -59,12 +55,18 @@
     }
 
     .image-container {
+        position: relative;
         z-index: 10;
     }
 
     .header-image {
         max-height: 45rem;
         padding: 0 1rem;
+        display: block;
+
+        /* Fade the image itself from fully visible to transparent at the bottom */
+        -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 80%, rgba(0,0,0,0) 100%);
+        mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 80%, rgba(0,0,0,0) 100%);
     }
 
 }

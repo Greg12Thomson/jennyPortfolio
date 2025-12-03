@@ -7,6 +7,7 @@ import awsExports from './aws-exports.js';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './index.css';
 import './styles/footer.scss'
 import './styles/menu.scss'
 import './styles/header.scss'

@@ -1,11 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useMemo } from 'react';
 import { Col, Row, Button } from 'react-bootstrap';
 import { StorageImage } from '@aws-amplify/ui-react-storage';
-
-
-const porfolioImages = Array(47).fill(0).map((_, i) => (
-    <StorageImage alt={`portfolio-image-${i}`} path={`public/${i}.jpg`}  className="portfolio-photo" key={i} />
-));
 
 function Photo() {
     const [show, setShow] = useState(false);
@@ -20,6 +15,22 @@ function Photo() {
         }
     }
 
+    // Only create images for the current page - this dramatically improves load time
+    const currentPageImages = useMemo(() => {
+        const startIndex = 10 * (page - 1);
+        const endIndex = Math.min(10 * page, 47); // Cap at 47 total images
+        return Array.from({ length: endIndex - startIndex }, (_, i) => {
+            const index = startIndex + i;
+            return (
+                <StorageImage 
+                    alt={`portfolio-image-${index}`} 
+                    path={`public/${index}.jpg`} 
+                    className="portfolio-photo" 
+                    key={index}
+                />
+            );
+        });
+    }, [page]);
 
     return (
         <Row className={show ? "menu-item show" : "menu-item"}>
@@ -28,7 +39,7 @@ function Photo() {
                     <h2 onClick={() => setShow(!show)}>Photo</h2>
                     <div className={show ? "photo-container" : "hide"}>
                         <div className="photo-content">
-                            {porfolioImages.slice(10 * (page - 1), 10 * page)}
+                            {currentPageImages}
                         </div>
                         <Button className="porfolio-button" onClick={onClick}>
                             See more

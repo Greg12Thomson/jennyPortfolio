@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Col, Row } from 'react-bootstrap';
+import { Col, Row, Modal } from 'react-bootstrap';
 
 import YouTube, { YouTubeEvent } from "react-youtube";
 
@@ -9,14 +9,42 @@ const _onReady = (event: YouTubeEvent) => {
 
 function PreviousWork() {
     const [show, setShow] = useState(false);
+    const [selectedVideo, setSelectedVideo] = useState<string | null>(null);
+    const [showModal, setShowModal] = useState(false);
 
     const options = {
-        height: '390',
-        width: '640',
+        height: '720',
+        width: '1280',
         playerVars: {
           controls: 1,
         },
       };
+
+    const handleVideoClick = (videoId: string) => {
+        setSelectedVideo(videoId);
+        setShowModal(true);
+    };
+
+    const handleCloseModal = () => {
+        setShowModal(false);
+        setSelectedVideo(null);
+    };
+
+    const getThumbnailUrl = (videoId: string) => {
+        // Use hqdefault as primary since it's more reliable
+        return `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`;
+    };
+
+    const handleImageError = (e: React.SyntheticEvent<HTMLImageElement, Event>, videoId: string) => {
+        // Fallback to sddefault if hqdefault fails
+        const target = e.target as HTMLImageElement;
+        if (target.src.includes('hqdefault')) {
+            target.src = `https://img.youtube.com/vi/${videoId}/sddefault.jpg`;
+        } else if (target.src.includes('sddefault')) {
+            // Last resort: use mqdefault
+            target.src = `https://img.youtube.com/vi/${videoId}/mqdefault.jpg`;
+        }
+    };
 
     return (
         <Row className={show ? "menu-item show" : "menu-item"}>
@@ -33,22 +61,46 @@ function PreviousWork() {
                             <Col md={3} sm={6} className="work-card">
                                 <h3>Sara DRTV</h3>
                                 <p>Story gatherer, producer, writer, director</p>
-                                <div className="video-container">
-                                    <YouTube className="youtube" videoId="RtZcvOvuVvc" opts={options} onReady={_onReady} id="video"/>
+                                <div className="video-container" onClick={() => handleVideoClick("RtZcvOvuVvc")}>
+                                    <img 
+                                        src={getThumbnailUrl("RtZcvOvuVvc")} 
+                                        alt="Sara DRTV video thumbnail" 
+                                        className="video-thumbnail"
+                                        onError={(e) => handleImageError(e, "RtZcvOvuVvc")}
+                                    />
+                                    <div className="play-button-overlay">
+                                        <div className="play-button">▶</div>
+                                    </div>
                                 </div>
                             </Col>
                             <Col md={3} sm={6} className="work-card">
                                 <h3>Award Winning End Childhood Crisis Campaign</h3>
                                 <p>Writer, producer, director</p>
-                                <div className="video-container">
-                                    <YouTube className="youtube" videoId="sPKmE9mpiAA" opts={options} onReady={_onReady} id="video"/>
+                                <div className="video-container" onClick={() => handleVideoClick("sPKmE9mpiAA")}>
+                                    <img 
+                                        src={getThumbnailUrl("sPKmE9mpiAA")} 
+                                        alt="Award Winning End Childhood Crisis Campaign video thumbnail" 
+                                        className="video-thumbnail"
+                                        onError={(e) => handleImageError(e, "sPKmE9mpiAA")}
+                                    />
+                                    <div className="play-button-overlay">
+                                        <div className="play-button">▶</div>
+                                    </div>
                                 </div>
                             </Col>
                             <Col md={3} sm={6} className="work-card">
                                 <h3>Grace's story </h3>
                                 <p>story gatherer, producer, director, voice over</p>
-                                <div className="video-container">
-                                    <YouTube className="youtube" videoId="zwMP-edgHpk" opts={options} onReady={_onReady} id="video"/>
+                                <div className="video-container" onClick={() => handleVideoClick("zwMP-edgHpk")}>
+                                    <img 
+                                        src={getThumbnailUrl("zwMP-edgHpk")} 
+                                        alt="Grace's story video thumbnail" 
+                                        className="video-thumbnail"
+                                        onError={(e) => handleImageError(e, "zwMP-edgHpk")}
+                                    />
+                                    <div className="play-button-overlay">
+                                        <div className="play-button">▶</div>
+                                    </div>
                                 </div>
                             </Col>
                             <Col md={3} sm={6} className="work-card">
@@ -64,6 +116,24 @@ function PreviousWork() {
                     </div>
                 </div>
             </Col>
+
+            <Modal show={showModal} onHide={handleCloseModal} size="xl" centered className="video-modal">
+                <Modal.Header closeButton className="video-modal-header">
+                    <Modal.Title>Video</Modal.Title>
+                </Modal.Header>
+                <Modal.Body className="video-modal-body">
+                    {selectedVideo && (
+                        <div className="modal-video-container">
+                            <YouTube 
+                                videoId={selectedVideo} 
+                                opts={options} 
+                                onReady={_onReady}
+                                className="modal-youtube"
+                            />
+                        </div>
+                    )}
+                </Modal.Body>
+            </Modal>
         </Row>
     );
 }

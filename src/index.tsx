@@ -8,12 +8,14 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css';
+import './styles/fonts.scss';
 import './styles/footer.scss'
 import './styles/menu.scss'
 import './styles/header.scss'
 import './styles/contact.scss'
 import './styles/photo.scss'
 import './styles/previousWork.scss'
+import './styles/video.scss'
 import './styles/illustrations.scss'
 import { BrowserRouter } from 'react-router-dom';
 

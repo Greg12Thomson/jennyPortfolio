@@ -56,7 +56,7 @@ function PreviousWork() {
                             <Col md={3} sm={6} className="work-card">
                                 <h3>Generation hope</h3>
                                 <p>Story gatherer, producer, director, photographer and videographer of Esther and copywriter</p>
-                                <a className="work-link" target="_blank" rel="noopener noreferrer" href=" https://www.savethechildren.net/meet-the-generation-who-will-change-the-world">LINK</a>
+                                <a className="work-link" target="_blank" rel="noopener noreferrer" href=" https://www.savethechildren.net/meet-the-generation-who-will-change-the-world">View Project</a>
                             </Col>
                             <Col md={3} sm={6} className="work-card">
                                 <h3>Sara DRTV</h3>
@@ -106,11 +106,11 @@ function PreviousWork() {
                             <Col md={3} sm={6} className="work-card">
                                 <h3>In End Childhood Hunger</h3>
                                 <p>Writer and producer</p>
-                                <a className="work-link" target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/reel/CjBISQOrGIo/">LINK</a>
+                                <a className="work-link" target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/reel/CjBISQOrGIo/">View Project</a>
                             </Col>
                             <Col md={3} sm={6} className="work-card">
                                 <h3>The Drum author homepage</h3>
-                                <a className="work-link" target="_blank" rel="noopener noreferrer" href="https://www.thedrum.com/users/jennycleeton ">LINK</a>
+                                <a className="work-link" target="_blank" rel="noopener noreferrer" href="https://www.thedrum.com/users/jennycleeton ">View Project</a>
                             </Col>
                     </Row>
                     </div>

@@ -174,7 +174,30 @@
 }
 
 .work-link {
+    display: inline-block;
     color: black;
+    background-color: $yellow;
+    border: none;
+    padding: 0.5rem 2rem;
+    border-radius: 5rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    margin-top: 1rem;
+    cursor: pointer;
+
+    &:hover {
+        background-color: $orange-hover;
+        color: white;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    &:active {
+        background-color: $background-colour;
+        transform: translateY(0);
+    }
 }
 
 .about-content {
